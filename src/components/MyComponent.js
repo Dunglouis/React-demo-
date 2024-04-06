@@ -8,9 +8,13 @@ class MyComponent extends React.Component {
         address: "Thanh Hoa",
     };
 
-    handle(event) {
+    handle = (event) => {
         console.log("done click");
-        console.log(event.target);
+        console.log(this.state.name);
+        this.setState({
+            name: "Pham Dung",
+            age: Math.floor(Math.random() * 100 + 1),
+        })
     }
     render() {
         return (
@@ -19,7 +23,7 @@ class MyComponent extends React.Component {
                 {Math.random()}
                 toi ten la: {this.state.name}
                 tuoi: {this.state.age}
-                <button onClick={this.handle}>click me</button>
+                <button onClick={(event) => { this.handle(event) }}>click me</button>
             </div>
         );
     }
