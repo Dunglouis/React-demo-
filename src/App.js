@@ -11,6 +11,7 @@ class App extends React.Component {
       <div>
         Edit and save to reload.
         <MyComponent></MyComponent>
+
       </div>
     );
   }
