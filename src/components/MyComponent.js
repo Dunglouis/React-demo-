@@ -13,11 +13,18 @@ class MyComponent extends React.Component {
         ]
 
     }
+
+    addUser = (userObj) => {
+        console.log("done submit: ", userObj);
+        this.setState({
+            listUser: [userObj, ...this.state.listUser]
+        })
+    }
     render() {
 
         return (
             <div>
-                <Userinfor></Userinfor>
+                <Userinfor addUser={this.addUser}></Userinfor>
                 <DisplayInfor listUser={this.state.listUser} />
             </div>
 
