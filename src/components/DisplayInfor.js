@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './DisplayInfor.scss';
 
 // class DisplayInfor extends React.Component {
@@ -37,9 +37,18 @@ import './DisplayInfor.scss';
 
 const DisplayInfor = (props) => {
     const { listUser } = props;
+    const [isShowHighListUser, setShowHighListUser] = useState(true);
+    const handleShowHighListUser = () => {
+        setShowHighListUser(!isShowHighListUser);
+    }
     return (
         <div className="display-infor-container">
-            {true &&
+            <div>
+                <spand onClick={() => handleShowHighListUser()}>
+                    Show list user
+                </spand>
+            </div>
+            {isShowHighListUser &&
                 <>
                     {
                         listUser.map((user) => {
