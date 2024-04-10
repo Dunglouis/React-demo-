@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './DisplayInfor.scss';
 
 // class DisplayInfor extends React.Component {
@@ -41,6 +41,15 @@ const DisplayInfor = (props) => {
     const handleShowHighListUser = () => {
         setShowHighListUser(!isShowHighListUser);
     }
+
+    useEffect(
+        () => {
+            if (listUser.length === 0) {
+                alert("het roi");
+            }
+            console.log("useEffect");
+        }, [listUser]
+    );
     return (
         <div className="display-infor-container">
             <div>
