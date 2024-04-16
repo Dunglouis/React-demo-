@@ -1,19 +1,23 @@
 import './App.scss';
 import Header from './components/Header/Header'
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const App = () => {
 
   return (
     <div className="app-container">
-      <Header />
-      <div>
-        test link
+      <div className='header-container'>
+        <Header />
       </div>
-      <div>
-        <button><Link to={`/Users`}>go to User Padge</Link></button>
-        <button><Link to={`/Admins`}>got o Admin padge</Link></button>
+      <div className='main-container'>
+        <div className='sidenav-content'>
+
+        </div>
+        <div className='app-content'>
+          <Outlet></Outlet>
+        </div>
       </div>
+
     </div>
   );
 }
