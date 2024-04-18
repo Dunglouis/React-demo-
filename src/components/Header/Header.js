@@ -20,9 +20,9 @@ const BasicExample = () => {
                     </Nav>
                     <Nav>
                         <NavDropdown title="Setting" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Logout</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Profile</NavDropdown.Item>
+                            <NavDropdown.Item >Login</NavDropdown.Item>
+                            <NavDropdown.Item >Logout</NavDropdown.Item>
+                            <NavDropdown.Item >Profile</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
