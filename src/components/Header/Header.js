@@ -8,7 +8,8 @@ const BasicExample = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="#home">Dung Do Do</Navbar.Brand>
+                {/* <Navbar.Brand>Dung Do Do</Navbar.Brand> */}
+                <NavLink to='/' className='navbar-brand'>Dung Do Do</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
